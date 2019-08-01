@@ -18,7 +18,7 @@
   let isLoading = true;
   let error;
 
-  fetch("https://svelte-course.firebaseio.com/meetups.json")
+  fetch("https://svelte-test-79482.firebaseio.com/meetups.json")
     .then(res => {
       if (!res.ok) {
         throw new Error("Fetching meetups failed, please try again later!");

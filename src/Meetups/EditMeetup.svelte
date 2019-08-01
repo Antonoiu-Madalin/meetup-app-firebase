@@ -57,7 +57,7 @@
 
     // meetups.push(newMeetup); // DOES NOT WORK!
     if (id) {
-      fetch(`https://svelte-course.firebaseio.com/meetups/${id}.json`, {
+      fetch(`https://svelte-test-79482.firebaseio.com/meetups/${id}.json`, {
         method: "PATCH",
         body: JSON.stringify(meetupData),
         headers: { "Content-Type": "application/json" }
@@ -72,7 +72,7 @@
           console.log(err);
         });
     } else {
-      fetch("https://svelte-course.firebaseio.com/meetups.json", {
+      fetch("https://svelte-test-79482.firebaseio.com/meetups.json", {
         method: "POST",
         body: JSON.stringify({ ...meetupData, isFavorite: false }),
         headers: { "Content-Type": "application/json" }
@@ -98,7 +98,7 @@
   }
 
   function deleteMeetup() {
-    fetch(`https://svelte-course.firebaseio.com/meetups/${id}.json`, {
+    fetch(`https://svelte-test-79482.firebaseio.com/meetups/${id}.json`, {
       method: "DELETE"
     })
       .then(res => {
